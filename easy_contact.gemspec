@@ -7,13 +7,15 @@ require "easy_contact/version"
 Gem::Specification.new do |s|
   s.name        = "easy_contact"
   s.version     = EasyContact::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of EasyContact."
-  s.description = "TODO: Description of EasyContact."
+  s.authors     = ["Yen-Ju Chen"]
+  s.email       = ["yjchenx@gmail.com"]
+  s.homepage    = "https://github.com/yjchen/easy_contact"
+  s.summary     = "A very simple contact system for Rails"
+  s.description = s.summary
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.signing_key = File.join(Dir.home,'/.gem/trust/gem-private_key.pem')
+  s.cert_chain = ['gem-public_cert.pem']
 
   s.add_dependency "rails", "~> 3.2.11"
   # s.add_dependency "jquery-rails"
