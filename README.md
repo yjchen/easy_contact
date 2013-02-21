@@ -27,22 +27,22 @@ This gem is used in my other projects, thus, it will be kept updated, albeit slo
 
   Each information is stored in an entry, no matter it is an address or a phone number. An entry contains these fields:
 
-    type
-    label
-    content
-    extra
-    addition
-    country
-    locale
-    primary
+    type: string
+    label: string
+    content: text
+    extra: string
+    addition: string
+    country: string
+    locale: string
+    primary: boolean
   
-  All of them are in string format. The *type* defines this entry is an address or a phone number. The use of other fields depend on the type.
+  All of them are in string format. The **type** defines this entry an address or a phone number. The use of other fields depend on the type.
 
-  *country* is used in address and phone type. It is set as 2-letter abbreviation of country like US, UK.
+  **country** is used in address and phone type. It is set as 2-letter abbreviation of country like US, UK.
 
-  *locale* set the language of this entry. A person might have English and Chinese name.
+  **locale** set the language of this entry. A person might have English and Chinese name.
 
-  *primary* specify the main entry of a type, for example, the main address of a person.
+  **primary** specify the main entry of a type, for example, the main address of a person.
 
 ### Name (type: 'name')
 
@@ -64,7 +64,7 @@ This gem is used in my other projects, thus, it will be kept updated, albeit slo
 
 ### Phone (type: 'phone')
 
-  It is in a free form of address. Thus, you can use 1-545-8342 or (545)8743.
+  It is in a free form of address. Thus, you can use 1-545-8342 or (545)8743. There is no need to put country code. The code can be derived from country field.
 
     Content: string of phone number
     Label: 'home', 'office'
@@ -82,7 +82,7 @@ This gem is used in my other projects, thus, it will be kept updated, albeit slo
 
 ### Birthday (type: 'birthday')
 
-  It is in seconds. Use __to_i__ to convert a date into seconds.
+  It is in seconds. Use __to_i__ to convert a date into seconds. Time zone is ignored. To avoid problem, always use UTC even if you are not born in UTC time zone.
 
     Content: string in seconds
     Label: no predefined
