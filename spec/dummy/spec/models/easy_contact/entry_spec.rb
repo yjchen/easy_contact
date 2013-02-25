@@ -11,5 +11,26 @@ describe EasyContact::Entry do
       user = User.create(params)
       user.entries.count.should eq(2)
     end
+
+    it 'create nested names' do
+      params = { :names_attributes => [
+        { :content => 'first name' },
+        { :content => 'second name' }
+      ]}
+
+      user = User.create(params)
+      user.names.count.should eq(2)
+      user.entries.count.should eq(2)
+    end
+
+    it 'reject blank field' do
+      params = { :names_attributes => [
+        { :content => '' },
+        { :content => 'second name' }
+      ]}
+
+      user = User.create(params)
+      user.names.count.should eq(1)
+    end
   end
 end
