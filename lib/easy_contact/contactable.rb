@@ -21,9 +21,19 @@ module EasyContact
       has_many :websites, :dependent => :destroy,
         :class_name => 'EasyContact::Website',
         :foreign_key => 'contactable_id'
+      has_many :messengers, :dependent => :destroy,
+        :class_name => 'EasyContact::Messenger',
+        :foreign_key => 'contactable_id'
+      has_many :birthdays, :dependent => :destroy,
+        :class_name => 'EasyContact::Birthday',
+        :foreign_key => 'contactable_id'
+      has_many :employments, :dependent => :destroy,
+        :class_name => 'EasyContact::Employment',
+        :foreign_key => 'contactable_id'
 
       accepts_nested_attributes_for :entries, 
-        :names, :phones, :addresses, :emails, :websites,
+        :names, :phones, :addresses, :emails, :websites, 
+        :messengers, :birthdays, :employments,
         :reject_if => :reject_entries,
         :allow_destroy => true
     end

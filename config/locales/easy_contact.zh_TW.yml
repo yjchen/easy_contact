@@ -1,0 +1,35 @@
+zh-TW:
+  activerecord:
+    models:
+      easy_contact/entry: '項目'
+      easy_contact/name: '姓名'
+      easy_contact/address: '地址'
+      easy_contact/phone: '電話'
+      easy_contact/email: '電子郵件'
+      easy_contact/messenger: '即時通訊'
+      easy_contact/birthday: '紀念日'
+      easy_contact/employment: '履歷'
+      easy_contact/website: '網站'
+    attributes:
+      easy_contact/entry:
+        content: 'content'
+      easy_contact/name:
+        label: '標籤'
+        locale: '語言'
+        content: '姓名'
+      easy_contact/address:
+        label: '標籤'
+        locale: '語言'
+        content: '地址'
+        country: '國家'
+      easy_contact/phone:
+        label: '標籤'
+        content: '電話號碼'
+      easy_contact/email:
+        label: '標籤'
+        content: '電子郵件'
+      easy_contact/employment:
+        label: '標籤'
+        content: '單位'
+        addition: '年份'
+        extra: '職位'

@@ -1,0 +1,11 @@
+en:
+  activerecord:
+    models:
+      easy_contact/entry: 'entry'
+      easy_contact/name: 'name'
+      easy_contact/employment: 'employment'
+    attributes:
+      easy_contact/entry:
+        content: 'content'
+      easy_contact/employment:
+        content: 'company'
