@@ -17,6 +17,8 @@
 /spec/dummy/tmp
 /public/assets/
 /config/secret_settings.yml
+.ruby-version
+.ruby-gemset
 
 *.log
 .DS_Store
